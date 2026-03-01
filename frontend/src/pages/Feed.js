@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PostCard from '../components/PostCard';
+import CreatePostModal from '../components/CreatePostModal';
 import './Feed.css';
 
 /**
  * Página del feed principal
  * Muestra las publicaciones de todos los usuarios
- * 
+ *
  * TODO: FE-04 - Implementar scroll infinito
- * TODO: FE-06 - Agregar modal para crear publicaciones
  */
 const Feed = () => {
   // Mock data - en producción vendría de la API
@@ -38,19 +38,41 @@ const Feed = () => {
     }
   ];
 
+  // Cargar posts guardados en localStorage (creados por el usuario)
+  const getStoredPosts = () => {
+    try {
+      return JSON.parse(localStorage.getItem('posts') || '[]');
+    } catch {
+      return [];
+    }
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [userPosts, setUserPosts] = useState(getStoredPosts);
+
+  // Unir posts del usuario (más recientes primero) con los mock
+  const allPosts = [...userPosts, ...mockPosts];
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
+  const handlePostCreated = (newPost) => {
+    setUserPosts((prev) => [newPost, ...prev]);
+  };
+
   return (
     <div className="feed-page">
       <div className="container">
         <div className="feed-container">
           <div className="feed-header">
             <h2>Feed de Publicaciones</h2>
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={handleOpenModal}>
               ✏️ Nueva Publicación
             </button>
           </div>
 
           <div className="posts-list">
-            {mockPosts.map(post => (
+            {allPosts.map(post => (
               <PostCard key={post.id} post={post} />
             ))}
           </div>
@@ -60,6 +82,13 @@ const Feed = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal de crear post */}
+      <CreatePostModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        onPostCreated={handlePostCreated}
+      />
     </div>
   );
 };
