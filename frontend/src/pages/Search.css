@@ -57,10 +57,10 @@
 .search-input,
 .search-select {
   padding: 0.6rem 0.9rem;
-  border: 1.5px solid #ddd;
+  border: 1.5px solid var(--border-color, #ddd);
   border-radius: 8px;
   font-size: 0.95rem;
-  background: #fff;
+  background: var(--bg-secondary, #fff);
   transition: border-color 0.2s, box-shadow 0.2s;
   color: var(--text-primary, #1a1a2e);
 }
@@ -179,7 +179,7 @@
   justify-content: space-between;
   margin-top: auto;
   padding-top: 0.75rem;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid var(--border-color, #f0f0f0);
 }
 
 .user-card-stats {

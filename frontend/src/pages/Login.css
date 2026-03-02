@@ -19,12 +19,12 @@
 .login-card h2 {
   text-align: center;
   margin-bottom: 10px;
-  color: #1c1e21;
+  color: var(--text-primary);
 }
 
 .login-subtitle {
   text-align: center;
-  color: #65676b;
+  color: var(--text-secondary);
   margin-bottom: 30px;
 }
 
@@ -42,16 +42,18 @@
 
 .form-group label {
   font-weight: 600;
-  color: #1c1e21;
+  color: var(--text-primary);
   font-size: 14px;
 }
 
 .form-group input {
   padding: 12px;
-  border: 1px solid #dddfe2;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   font-size: 16px;
   transition: border-color 0.2s;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .form-group input:focus {
@@ -71,7 +73,7 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #65676b;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
@@ -93,12 +95,12 @@
 .login-footer {
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #e4e6eb;
+  border-top: 1px solid var(--border-color);
   text-align: center;
 }
 
 .login-footer p {
-  color: #65676b;
+  color: var(--text-secondary);
 }
 
 .register-link {

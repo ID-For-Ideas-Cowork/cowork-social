@@ -4,9 +4,10 @@
   left: 0;
   right: 0;
   height: 60px;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--navbar-bg);
+  box-shadow: 0 2px 4px var(--shadow);
   z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-content {
@@ -36,7 +37,7 @@
 
 .navbar-menu a {
   text-decoration: none;
-  color: #1c1e21;
+  color: var(--text-primary);
   font-weight: 500;
   transition: color 0.2s;
 }
@@ -57,5 +58,41 @@
   .navbar-menu {
     gap: 15px;
     font-size: 14px;
+  }
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--btn-secondary-bg);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  background: var(--btn-secondary-hover);
+  transform: scale(1.05);
+}
+
+.theme-toggle-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle-label {
+    display: none;
+  }
+
+  .theme-toggle {
+    padding: 6px 8px;
   }
 }
