@@ -3,14 +3,8 @@ import PostCard from '../components/PostCard';
 import CreatePostModal from '../components/CreatePostModal';
 import './Feed.css';
 
-/**
- * Página del feed principal
- * Muestra las publicaciones de todos los usuarios
- *
- * TODO: FE-04 - Implementar scroll infinito
- */
 const Feed = () => {
-  // Mock data - en producción vendría de la API
+  // datos mock - reemplazar con api
   const mockPosts = [
     {
       id: 1,
@@ -38,7 +32,7 @@ const Feed = () => {
     }
   ];
 
-  // Cargar posts guardados en localStorage (creados por el usuario)
+  // posts guardados por el usuario
   const getStoredPosts = () => {
     try {
       return JSON.parse(localStorage.getItem('posts') || '[]');
@@ -50,12 +44,14 @@ const Feed = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [userPosts, setUserPosts] = useState(getStoredPosts);
 
-  // Unir posts del usuario (más recientes primero) con los mock
+  // combinar posts (user primero, luego mock)
   const allPosts = [...userPosts, ...mockPosts];
 
+  // handlers modal
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
 
+  // nuevo post
   const handlePostCreated = (newPost) => {
     setUserPosts((prev) => [newPost, ...prev]);
   };
@@ -83,7 +79,7 @@ const Feed = () => {
         </div>
       </div>
 
-      {/* Modal de crear post */}
+      {/* modal crear post */}
       <CreatePostModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}

@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './CreatePostModal.css';
 
-/**
- * Modal para crear nuevas publicaciones
- * Guarda posts en localStorage y notifica al padre con onPostCreated
- */
 const CreatePostModal = ({ isOpen, onClose, onPostCreated }) => {
   const [content, setContent] = useState('');
   const [charCount, setCharCount] = useState(0);
 
   const MAX_CHARS = 500;
 
+  // contador caracteres
   useEffect(() => {
     setCharCount(content.length);
   }, [content]);
 
-  // Cerrar con Escape
+  // cerrar con escape
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && isOpen) onClose();
@@ -24,7 +21,7 @@ const CreatePostModal = ({ isOpen, onClose, onPostCreated }) => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Bloquear scroll del body cuando el modal está abierto
+  // bloquear scroll
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -47,15 +44,15 @@ const CreatePostModal = ({ isOpen, onClose, onPostCreated }) => {
       comments: 0,
     };
 
-    // Guardar en localStorage
+    // guardar en localStorage
     const stored = JSON.parse(localStorage.getItem('posts') || '[]');
     const updated = [newPost, ...stored];
     localStorage.setItem('posts', JSON.stringify(updated));
 
-    // Notificar al padre
+    // notificar al padre
     if (onPostCreated) onPostCreated(newPost);
 
-    // Limpiar y cerrar
+    // limpiar y cerrar
     setContent('');
     onClose();
   };
@@ -91,7 +88,7 @@ const CreatePostModal = ({ isOpen, onClose, onPostCreated }) => {
             </span>
           </div>
 
-          {/* Preview */}
+          {/* vista previa */}
           {content.trim() && (
             <div className="modal-preview">
               <p className="preview-label">Vista previa</p>

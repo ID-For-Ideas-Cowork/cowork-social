@@ -3,22 +3,18 @@ import { Link } from 'react-router-dom';
 import mockUsers from '../data/mockUsers';
 import './Search.css';
 
-/**
- * Página de búsqueda de usuarios
- * Permite filtrar por nombre y por skill
- */
 const Search = () => {
   const [searchName, setSearchName] = useState('');
   const [searchSkill, setSearchSkill] = useState('');
 
-  // Lista de skills únicas para el selector de filtro
+  // skills unicas para filtro
   const allSkills = useMemo(() => {
     const skillSet = new Set();
     mockUsers.forEach(user => user.skills.forEach(skill => skillSet.add(skill)));
     return Array.from(skillSet).sort();
   }, []);
 
-  // Filtrado reactivo de usuarios
+  // filtrado usuarios
   const filteredUsers = useMemo(() => {
     return mockUsers.filter(user => {
       const matchesName = user.name
@@ -48,7 +44,7 @@ const Search = () => {
           </p>
         </div>
 
-        {/* Filtros */}
+        {/* filtros */}
         <div className="search-filters card">
           <div className="filters-row">
             <div className="filter-group">
@@ -98,7 +94,7 @@ const Search = () => {
           </p>
         </div>
 
-        {/* Resultados */}
+        {/* resultados */}
         {filteredUsers.length > 0 ? (
           <div className="users-grid">
             {filteredUsers.map(user => (
@@ -120,9 +116,7 @@ const Search = () => {
   );
 };
 
-/**
- * Card individual de usuario en resultados de búsqueda
- */
+// card usuario
 const UserCard = ({ user, searchSkill }) => {
   return (
     <div className="user-card card">

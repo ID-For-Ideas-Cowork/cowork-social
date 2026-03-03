@@ -1,7 +1,3 @@
-/**
- * Datos mock de usuarios para el buscador
- * TODO: Reemplazar con llamadas reales a la API
- */
 const mockUsers = [
   {
     id: 1,
