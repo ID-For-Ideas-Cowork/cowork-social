@@ -35,7 +35,29 @@ const mockPosts = [
 const loadPosts = () => {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : mockPosts;
+    if (!saved) {
+      return mockPosts;
+    }
+
+    const parsed = JSON.parse(saved);
+
+    // Ensure parsed value is an array of post-like objects; otherwise, fall back to mockPosts
+    if (!Array.isArray(parsed)) {
+      return mockPosts;
+    }
+
+    const isValidPostsArray = parsed.every(post =>
+      post &&
+      typeof post === 'object' &&
+      'id' in post &&
+      'author' in post &&
+      'content' in post &&
+      'createdAt' in post &&
+      'likes' in post &&
+      'comments' in post
+    );
+
+    return isValidPostsArray ? parsed : mockPosts;
   } catch {
     return mockPosts;
   }
