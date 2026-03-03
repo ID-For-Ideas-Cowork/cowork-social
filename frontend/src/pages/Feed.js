@@ -42,7 +42,12 @@ const loadPosts = () => {
 };
 
 const savePosts = (posts) => {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+  } catch (error) {
+    // Non-blocking: log and continue so the UI doesn't break if storage is unavailable
+    console.error('Failed to save posts to localStorage:', error);
+  }
 };
 
 const Feed = () => {
