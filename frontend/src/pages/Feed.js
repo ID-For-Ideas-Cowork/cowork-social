@@ -85,9 +85,11 @@ const Feed = () => {
       likes: 0,
       comments: 0
     };
-    const updated = [newPost, ...posts];
-    setPosts(updated);
-    savePosts(updated);
+    setPosts(prevPosts => {
+      const updated = [newPost, ...prevPosts];
+      savePosts(updated);
+      return updated;
+    });
   };
 
   return (
