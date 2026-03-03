@@ -16,6 +16,9 @@ dist/
 *.swo
 *~
 
+# AI tools
+.claude/
+
 # OS
 .DS_Store
 Thumbs.db

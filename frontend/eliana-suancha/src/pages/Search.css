@@ -1,0 +1,261 @@
+.search-page {
+  min-height: calc(100vh - 60px);
+  padding: 40px 0;
+}
+
+.search-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.search-header h2 {
+  margin: 0 0 6px;
+  color: var(--text-color);
+}
+
+.search-subtitle {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 44px;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  font-size: 16px;
+  background: var(--input-bg);
+  color: var(--text-color);
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1877f2;
+}
+
+.clear-input {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.clear-input:hover {
+  background: var(--action-btn-hover);
+}
+
+
+.skills-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-filter-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.skill-filter-btn:hover {
+  border-color: #1877f2;
+  color: #1877f2;
+}
+
+.skill-filter-btn.active {
+  background: #1877f2;
+  border-color: #1877f2;
+  color: #ffffff;
+}
+
+
+.search-results-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.clear-filters {
+  background: none;
+  border: none;
+  color: #1877f2;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+}
+
+.clear-filters:hover {
+  text-decoration: underline;
+}
+
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.user-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.user-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.user-name {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.user-location {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.user-bio {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.user-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.user-skill-tag {
+  padding: 4px 10px;
+  background: var(--skill-tag-bg);
+  color: #1877f2;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.user-skill-tag:hover {
+  background: #1877f2;
+  color: #ffffff;
+}
+
+.user-skill-tag.highlighted {
+  background: #1877f2;
+  color: #ffffff;
+}
+
+.view-profile-btn {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.no-results-icon {
+  font-size: 48px;
+}
+
+.no-results p {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .search-page {
+    padding: 24px 0;
+  }
+
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-results-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
