@@ -28,12 +28,12 @@
 .author-info h4 {
   margin: 0;
   font-size: 15px;
-  color: var(--text-color);
+  color: #1c1e21;
 }
 
 .post-date {
   font-size: 13px;
-  color: var(--text-muted);
+  color: #65676b;
 }
 
 .post-content {
@@ -43,7 +43,7 @@
 .post-content p {
   margin: 0 0 10px 0;
   line-height: 1.5;
-  color: var(--text-color);
+  color: #1c1e21;
 }
 
 .post-image {
@@ -56,7 +56,7 @@
   display: flex;
   gap: 10px;
   padding-top: 10px;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid #e4e6eb;
 }
 
 .action-btn {
@@ -68,10 +68,10 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: #65676b;
   transition: background 0.2s;
 }
 
 .action-btn:hover {
-  background: var(--action-btn-hover);
+  background: #f0f2f5;
 }

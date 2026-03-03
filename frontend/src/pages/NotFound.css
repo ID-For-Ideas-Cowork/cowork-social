@@ -23,13 +23,13 @@
 
 .notfound-content h1 {
   font-size: 36px;
-  color: var(--text-color);
+  color: #1c1e21;
   margin-bottom: 15px;
 }
 
 .notfound-content p {
   font-size: 18px;
-  color: var(--text-muted);
+  color: #65676b;
   margin-bottom: 40px;
   line-height: 1.6;
 }
