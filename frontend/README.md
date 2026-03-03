@@ -13,63 +13,51 @@ npm start
 
 Abre [http://localhost:3000](http://localhost:3000)
 
-## 🎯 3 Tareas a Completar
-
-🔥 **IMPORTANTE**: Debes completar las **3 tareas**, no solo 1.
+## ✅ Tareas Implementadas
 
 ### FE-01: Tema Oscuro/Claro ⚫⚪
 
-**Qué hacer:**
-- Crear toggle switch para cambiar tema
-- Definir variables CSS para modo claro y oscuro
-- Guardar preferencia en `localStorage`
-- Aplicar el tema al cargar la página
+**Archivos:**
+- `src/hooks/useTheme.js` — hook que lee/guarda el tema en `localStorage` y aplica la clase `dark-theme` al `body`
+- `src/App.css` — variables CSS para modo claro y oscuro (`--bg-color`, `--text-color`, `--card-bg`, etc.)
+- `src/App.js` — usa el hook y pasa `theme` / `toggleTheme` al Navbar
+- `src/components/Navbar.js` — toggle switch ☀️/🌙 en la barra de navegación
+- Todos los archivos CSS de páginas y componentes actualizados para usar las variables de tema
 
-**Ejemplo de colores:**
-- Claro: fondo #fff, texto #000
-- Oscuro: fondo #1a1a1a, texto #fff
-
-**Archivos a modificar:**
-- `src/App.js` o crear `src/hooks/useTheme.js`
-- `src/App.css` - variables CSS
-- Agregar toggle en `Navbar.js`
+**Cómo funciona:**
+- El toggle en el navbar cambia entre modo claro y oscuro
+- La preferencia se guarda en `localStorage` y se aplica automáticamente al recargar
 
 ---
 
 ### FE-02: Modal de Crear Post 📝
 
-**Qué hacer:**
-- Crear componente Modal que se abre con un botón
-- Formulario: textarea para contenido, botón para enviar
-- Preview del texto mientras escribes
-- Guardar posts en `localStorage`
-- Actualizar el feed automáticamente
+**Archivos:**
+- `src/components/CreatePostModal.js` — modal con textarea, vista previa en tiempo real y botón de publicar
+- `src/components/CreatePostModal.css` — estilos del modal con animación de entrada
+- `src/pages/Feed.js` — integra el modal, guarda y carga posts desde `localStorage`
 
-**Archivos a crear:**
-- `src/components/CreatePostModal.js`
-- `src/components/CreatePostModal.css`
-
-**Modificar:**
-- `src/pages/Feed.js` - agregar botón y lógica
+**Cómo funciona:**
+- El botón "✏️ Nueva Publicación" abre el modal
+- Mientras escribes aparece una vista previa del post
+- Al publicar, el post se agrega al inicio del feed y se persiste en `localStorage`
 
 ---
 
 ### FE-03: Buscador de Usuarios 🔍
 
-**Qué hacer:**
-- Crear página `/search` con input de búsqueda
-- Filtros: por nombre, por skill
-- Mostrar resultados en cards
-- Usar datos mock (array de 10-15 usuarios fake)
+**Archivos:**
+- `src/data/mockUsers.js` — 12 usuarios fake con nombre, ubicación, bio y skills
+- `src/pages/Search.js` — página `/search` con búsqueda por nombre y filtro por skill
+- `src/pages/Search.css` — estilos de la página y las cards de usuarios
+- `src/App.js` — ruta `/search` agregada
+- `src/components/Navbar.js` — link "Buscar" agregado al navbar
 
-**Archivos a crear:**
-- `src/pages/Search.js`
-- `src/pages/Search.css`
-- `src/data/mockUsers.js` (datos fake)
-
-**Modificar:**
-- `src/App.js` - agregar ruta
-- `src/components/Navbar.js` - agregar link
+**Cómo funciona:**
+- Input de texto filtra usuarios por nombre en tiempo real
+- Tags de skills clickeables filtran por tecnología
+- Ambos filtros funcionan combinados
+- Al hacer clic en un skill de una card se activa ese filtro
 
 ---
 

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /Users/elianisdev/WebstormProjects/-elianisDev-cowork-social/frontend && npm start)"
+    ]
+  }
+}
