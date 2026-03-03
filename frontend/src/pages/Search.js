@@ -95,13 +95,15 @@ const Search = () => {
 
                   <div className="user-skills">
                     {user.skills.map(skill => (
-                      <span
+                      <button
+                        type="button"
                         key={skill}
                         className={`user-skill-tag ${selectedSkill === skill ? 'highlighted' : ''}`}
                         onClick={() => handleSkillClick(skill)}
+                        aria-pressed={selectedSkill === skill}
                       >
                         {skill}
-                      </span>
+                      </button>
                     ))}
                   </div>
 
