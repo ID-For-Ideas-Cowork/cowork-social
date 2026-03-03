@@ -17,7 +17,7 @@
 
 .feed-header h2 {
   margin: 0;
-  color: #1c1e21;
+  color: var(--text-color);
 }
 
 .posts-list {
@@ -28,7 +28,7 @@
 .feed-loader {
   text-align: center;
   padding: 30px;
-  color: #65676b;
+  color: var(--text-muted);
 }
 
 @media (max-width: 768px) {
