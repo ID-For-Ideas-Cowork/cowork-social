@@ -125,7 +125,7 @@
   gap: 10px;
 }
 
-.btn:disabled {
+.modal-container .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }

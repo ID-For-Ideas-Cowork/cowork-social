@@ -35,14 +35,41 @@ const mockPosts = [
 const loadPosts = () => {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : mockPosts;
+    if (!saved) {
+      return mockPosts;
+    }
+
+    const parsed = JSON.parse(saved);
+
+    // Ensure parsed value is an array of post-like objects; otherwise, fall back to mockPosts
+    if (!Array.isArray(parsed)) {
+      return mockPosts;
+    }
+
+    const isValidPostsArray = parsed.every(post =>
+      post &&
+      typeof post === 'object' &&
+      'id' in post &&
+      'author' in post &&
+      'content' in post &&
+      'createdAt' in post &&
+      'likes' in post &&
+      'comments' in post
+    );
+
+    return isValidPostsArray ? parsed : mockPosts;
   } catch {
     return mockPosts;
   }
 };
 
 const savePosts = (posts) => {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+  } catch (error) {
+    // Non-blocking: log and continue so the UI doesn't break if storage is unavailable
+    console.error('Failed to save posts to localStorage:', error);
+  }
 };
 
 const Feed = () => {
@@ -58,9 +85,11 @@ const Feed = () => {
       likes: 0,
       comments: 0
     };
-    const updated = [newPost, ...posts];
-    setPosts(updated);
-    savePosts(updated);
+    setPosts(prevPosts => {
+      const updated = [newPost, ...prevPosts];
+      savePosts(updated);
+      return updated;
+    });
   };
 
   return (
