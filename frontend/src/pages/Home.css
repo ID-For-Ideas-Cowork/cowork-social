@@ -28,7 +28,7 @@
 
 .features-section {
   padding: 80px 0;
-  background-color: var(--bg-color); /* Ahora sí responderá al toggle */
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 
@@ -65,7 +65,7 @@
 
 .cta-section {
   padding: 80px 0;
-  background-color: var(--bg-color); /* Ahora sí responderá al toggle */
+  background-color: var(--bg-color);
   color: var(--text-color);
   text-align: center;
 }

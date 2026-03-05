@@ -38,7 +38,7 @@ body {
 
 }
 
-/* Contenedor del switch */
+ /* inicio formato toggle */
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
@@ -52,12 +52,10 @@ body {
   width: 50px;
 }
 
-/* Esconder el checkbox real */
 .theme-switch input {
   display: none;
 }
 
-/* El fondo del switch (Slider) */
 .slider {
   background-color: #ccc;
   bottom: 0;
@@ -70,7 +68,6 @@ body {
   border-radius: 34px;
 }
 
-/* El círculo blanco que se mueve */
 .slider:before {
   background-color: #fff;
   bottom: 4px;
@@ -83,14 +80,15 @@ body {
   border-radius: 50%;
 }
 
-/* Colores cuando está activo (Modo Oscuro) */
+
 input:checked + .slider {
-  background-color: #6366f1; /* Un color púrpura/azul moderno */
+  background-color: #6366f1;
 }
 
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+/* fin formato toggle */
 
 .App {
   min-height: 100vh;
