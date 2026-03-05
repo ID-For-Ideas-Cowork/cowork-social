@@ -52,16 +52,16 @@
 
 .profile-info h2 {
   margin: 0 0 10px 0;
-  color: #1c1e21;
+  color: var(--color-profile);
 }
 
 .profile-location {
-  color: #65676b;
+  color: var(--text-color);
   margin-bottom: 20px;
 }
 
 .profile-bio {
-  color: #1c1e21;
+  color: var(--text-color);
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto 30px;

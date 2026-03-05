@@ -1,3 +1,25 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --transition-speed: 0.3s;
+  --card-bg: #ffffff;
+  --card-color: #dcd8d8;
+  --btn-secondary-bg: #e4e6eb;
+  --btn-secondary-text: #1c1e21;
+  --color-profile: #1c1e21;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-bg: #242424;
+  --card-color: #dcd8d8;
+  --btn-secondary-bg: #333;
+  --btn-secondary-text: #ffffff;
+  --color-profile: #e1ebfa;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +32,64 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f2f5;
-  color: #1c1e21;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+}
+
+/* Contenedor del switch */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 50px;
+}
+
+/* Esconder el checkbox real */
+.theme-switch input {
+  display: none;
+}
+
+/* El fondo del switch (Slider) */
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+/* El círculo blanco que se mueve */
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 16px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 16px;
+  border-radius: 50%;
+}
+
+/* Colores cuando está activo (Modo Oscuro) */
+input:checked + .slider {
+  background-color: #6366f1; /* Un color púrpura/azul moderno */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 .App {
@@ -50,8 +128,8 @@ body {
 }
 
 .btn-secondary {
-  background-color: #e4e6eb;
-  color: #1c1e21;
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
 }
 
 .btn-secondary:hover {
@@ -59,7 +137,8 @@ body {
 }
 
 .card {
-  background: white;
+  background: var(--card-bg);
+  color: var(--card-color);
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
