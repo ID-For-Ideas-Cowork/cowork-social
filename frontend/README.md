@@ -1,6 +1,6 @@
 # Frontend - CoWork Social
 
-**Proyecto by [ID For IDeas](https://idforideas.com/)**
+**Proyecto by [ID For IDeas](https://linkedin.com/company/idforideas)**
 
 Frontend standalone con React. **No necesitas backend** - usa localStorage y datos mock.
 

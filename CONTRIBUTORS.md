@@ -23,6 +23,8 @@ Formato:
 - **Ana García** - [@anagarcia](https://github.com/anagarcia) - FE-01: Tema Oscuro
 -->
 
+- **Eliana Suancha Guzmán** - [@elianisdev](https://github.com/elianisdev) - FE-01: Tema Oscuro, FE-02: Página de Búsqueda, FE-03: Modal Crear Post
+
 ### Backend Developers
 
 <!-- Ejemplo:
