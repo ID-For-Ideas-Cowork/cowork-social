@@ -34,8 +34,8 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: white;
-  border: 5px solid white;
+  background: var(--bg-card);
+  border: 5px solid var(--bg-card);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
@@ -52,16 +52,16 @@
 
 .profile-info h2 {
   margin: 0 0 10px 0;
-  color: #1c1e21;
+  color: var(--text-color);
 }
 
 .profile-location {
-  color: #65676b;
+  color: var(--text-color);
   margin-bottom: 20px;
 }
 
 .profile-bio {
-  color: #1c1e21;
+  color: var(--text-color);
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto 30px;
@@ -72,8 +72,8 @@
   justify-content: center;
   gap: 50px;
   padding: 30px 0;
-  border-top: 1px solid #e4e6eb;
-  border-bottom: 1px solid #e4e6eb;
+  border-top: 1px solid var(--btn-secondary-bg);
+  border-bottom: 1px solid var(--btn-secondary-bg);
   margin-bottom: 30px;
 }
 
@@ -85,7 +85,7 @@
 
 .stat-item strong {
   font-size: 24px;
-  color: #1c1e21;
+  color: var(--text-color);
 }
 
 .stat-item span {
@@ -95,7 +95,7 @@
 
 .profile-skills h3 {
   margin-bottom: 15px;
-  color: #1c1e21;
+  color: var(--text-color);
 }
 
 .skills-list {
@@ -117,18 +117,19 @@
 .profile-posts {
   margin-top: 30px;
   padding: 30px;
-  background: white;
+  background: var(--bg-card);
   border-radius: 8px;
 }
 
 .profile-posts h3 {
   margin-bottom: 20px;
-  color: #1c1e21;
+  color: var(--text-color);
 }
 
 .coming-soon {
   text-align: center;
-  color: #65676b;
+  color: var(--text-color);
+  opacity: 0.6;
   padding: 40px 0;
 }
 
