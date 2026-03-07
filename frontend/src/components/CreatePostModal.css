@@ -1,0 +1,39 @@
+/* Contenedor que cubre toda la pantalla y oscurece el fondo */
+.modal-overlay {
+  position: fixed; /* Se mantiene fijo aunque el usuario haga scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Negro con 60% de opacidad */
+  display: flex;
+  justify-content: center; /* Centra el modal horizontalmente */
+  align-items: center; /* Centra el modal verticalmente */
+  z-index: 1000;  /* Asegura que esté por encima de cualquier otro elemento */
+}
+
+/* Caja blanca (o del color de la card) que contiene el formulario */
+.modal-content {
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaciado uniforme entre título, textarea y botones */
+}
+
+/* Estilo para el área de escritura */
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border-radius: 8px;
+  resize: none; /* Evita que el usuario deforme el diseño del modal */
+}
+
+/* Contenedor de los botones para alinearlos a la derecha */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
