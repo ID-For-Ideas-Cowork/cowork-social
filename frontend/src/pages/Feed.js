@@ -7,12 +7,16 @@ import './Feed.css';
  * Página del feed principal
  * Muestra las publicaciones de todos los usuarios
  * 
- * TODO: FE-04 - Implementar scroll infinito
- * TODO: FE-06 - Agregar modal para crear publicaciones
+ * Implementar scroll infinito
+ * Agregar modal para crear publicaciones
  */
 const Feed = () => {
   //Se crea el estado para controlar la visibilidad del modal
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  //Se trae lo guardado en el modal
+  const savedPosts = JSON.parse(localStorage.getItem('userPosts')) || [];
+
   // Mock data - en producción vendría de la API
   const mockPosts = [
     {
@@ -41,6 +45,8 @@ const Feed = () => {
     }
   ];
 
+  const allPosts = [...savedPosts, ...mockPosts];
+
   return (
     <div className="feed-page">
       <div className="container">
@@ -55,9 +61,9 @@ const Feed = () => {
           </div>
 
           <div className="posts-list">
-            {mockPosts.map(post => (
-              <PostCard key={post.id} post={post} />
-            ))}
+            {allPosts.map(post => (
+          <PostCard key={post.id} post={post} />
+        ))}
           </div>
 
           <div className="feed-loader">

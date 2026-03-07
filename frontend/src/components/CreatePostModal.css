@@ -37,3 +37,20 @@ textarea {
   justify-content: flex-end;
   gap: 10px;
 }
+
+.post-preview {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 4px solid var(--primary-color);
+  margin-top: 10px;
+  font-style: italic;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.post-preview small {
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}

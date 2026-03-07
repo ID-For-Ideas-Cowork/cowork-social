@@ -15,11 +15,30 @@ const CreatePostModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null; // Si no está abierto, no renderiza nada
 
   const handleSend = () => {
-    // Por ahora muestro solamente en consola; luego conectaré con localStorage (FE-02)
-    console.log("Enviando post:", postText);
-    // Se limpia el textarea después de "enviar"
+    // 1. Validación: Evitar publicaciones vacías o solo con espacios
+    if (!postText.trim()) return;
+
+    // 2. Persistencia: Recuperar existentes y agregar el nuevo post
+    const savedPosts = JSON.parse(localStorage.getItem('userPosts')) || [];
+    
+    const newPost = {
+      id: Date.now(), // ID único basado en tiempo
+      author: { name: 'Cristian Landeira', avatar: null }, 
+      content: postText,
+      createdAt: new Date().toISOString(),
+      likes: 0,
+      comments: 0
+    };
+
+    // Guardamos: el nuevo post va al principio de la lista
+    localStorage.setItem('userPosts', JSON.stringify([newPost, ...savedPosts]));
+
+    // 3. Limpieza y cierre
     setPostText('');
     onClose();
+    
+    // Forzamos recarga para actualizar el Feed (FE-02)
+    window.location.reload();
   };
 
   return (
@@ -31,11 +50,24 @@ const CreatePostModal = ({ isOpen, onClose }) => {
           value={postText}
           onChange={(e) => setPostText(e.target.value)}
         />
-        <div className="modal-actions">
-          {/* Botón para cancelar: cierra sin guardar cambios */}
-          <button className="btn btn-secondary" onClick={onClose}>Cancelar</button>
-          {/* Botón para publicar: dispara la lógica de guardado */}
-          <button className="btn btn-primary" onClick={handleSend}>Publicar</button>
+        {/* --- NUEVO: Sección de Vista Previa (Requisito FE-02) --- */}
+        {postText && (
+          <div className="post-preview">
+            <small>Vista previa:</small>
+            <p>{postText}</p>
+          </div>
+        )}
+       <div className="modal-actions">
+          <button className="btn btn-secondary" onClick={onClose}>
+            Cancelar
+          </button>
+          <button 
+            className="btn btn-primary" 
+            onClick={handleSend}
+            disabled={!postText.trim()} // Deshabilitar si no hay texto
+          >
+            Publicar
+          </button>
         </div>
       </div>
     </div>
