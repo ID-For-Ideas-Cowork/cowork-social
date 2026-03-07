@@ -1,0 +1,5 @@
+# Esta carpeta contendrá la documentación de Docker
+# Crea aquí:
+# - DOCKER_GUIDE.md (guía completa)
+# - docker-compose.prod.yml (opcional, para producción)
+# - screenshots/ (docker ps, servicios funcionando)
