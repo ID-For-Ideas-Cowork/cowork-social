@@ -1,8 +1,0 @@
-pandas>=2.1.4
-numpy>=1.26.2
-matplotlib>=3.8.2
-seaborn>=0.13.0
-plotly>=5.18.0
-streamlit>=1.29.0
-faker>=20.1.0
-jupyter>=1.0.0
