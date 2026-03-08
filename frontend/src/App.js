@@ -9,7 +9,7 @@ import Register from './cristian-landeira/pages/Register';
 import Profile from './cristian-landeira/pages/Profile';
 import Feed from './cristian-landeira/pages/Feed';
 import Search from './cristian-landeira/pages/Search';
-import NotFound from './pages/NotFound';
+import NotFound from './cristian-landeira/pages/NotFound';
 
 
 // Components
