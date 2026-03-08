@@ -3,16 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 // Pages
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Profile from './pages/Profile';
-import Feed from './pages/Feed';
+import Home from './cristian-landeira/pages/Home';
+import Login from './cristian-landeira/pages/Login';
+import Register from './cristian-landeira/pages/Register';
+import Profile from './cristian-landeira/pages/Profile';
+import Feed from './cristian-landeira/pages/Feed';
+import Search from './cristian-landeira/pages/Search';
 import NotFound from './pages/NotFound';
-import Search from './pages/Search'; 
+
 
 // Components
-import Navbar from './components/Navbar';
+import Navbar from './cristian-landeira/components/Navbar';
 
 function App() {
   return (

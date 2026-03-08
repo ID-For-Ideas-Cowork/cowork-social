@@ -17,7 +17,8 @@
 
 .feed-header h2 {
   margin: 0;
-  color: #1c1e21;
+  /* Adaptación dinámica del título al tema actual */
+  color: var(--text-color);
 }
 
 .posts-list {
@@ -28,7 +29,9 @@
 .feed-loader {
   text-align: center;
   padding: 30px;
-  color: #65676b;
+  /* Color adaptativo con opacidad para un estado de carga sutil */
+  color: var(--text-color);
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {
