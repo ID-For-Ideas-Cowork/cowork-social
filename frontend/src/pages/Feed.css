@@ -1,0 +1,44 @@
+.feed-page {
+  min-height: calc(100vh - 60px);
+  padding: 30px 0;
+}
+
+.feed-container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.feed-header h2 {
+  margin: 0;
+  color: #1c1e21;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-loader {
+  text-align: center;
+  padding: 30px;
+  color: #65676b;
+}
+
+@media (max-width: 768px) {
+  .feed-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .feed-header button {
+    width: 100%;
+  }
+}
