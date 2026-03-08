@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
-import { mockUsers } from '../data/mockUsers'; // Importamos tus datos mock
+import { mockUsers } from '../data/mockUsers'; //Se importa la base de datos local
 import './Search.css';
 
+
+/**
+ * Componente Search: Permite buscar y filtrar profesionales por nombre o habilidad.
+ * Tarea: FE-03 - Buscador de Usuarios.
+ */
 const Search = () => {
+  // // Estado para capturar el texto que el usuario ingresa en el buscador
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Lógica de filtrado: busca por nombre o por skill
+  /**
+   * Lógica de filtrado dinámico:
+   * 1. Se utiliza .filter() para crear un nuevo array con los usuarios que coinciden.
+   * 2. Se aplica .toLowerCase() para que la búsqueda ignore mayúsculas/minúsculas.
+   * 3. Se busca coincidencia tanto en el nombre (name) como en las habilidades (skill).
+   */
   const filteredUsers = mockUsers.filter(user =>
     user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     user.skill.toLowerCase().includes(searchTerm.toLowerCase())
@@ -26,6 +37,7 @@ const Search = () => {
       </div>
 
       <div className="results-grid">
+        {/* Renderizado condicional: si hay resultados, mapea las tarjetas; si no, muestra aviso */}
         {filteredUsers.length > 0 ? (
           filteredUsers.map(user => (
             <div key={user.id} className="user-card">

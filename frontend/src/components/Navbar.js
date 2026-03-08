@@ -19,7 +19,7 @@ const Navbar = () => {
         
         <ul className="navbar-menu">
           <li><Link to="/feed">Feed</Link></li>
-          <li><Link to="/search">Buscar</Link></li>
+          <li><Link to="/search">Buscar</Link></li> {/*Se incluye la sección de buscar en la barra de navegacion */}
           <li><Link to="/profile/me">Perfil</Link></li>
           <li><Link to="/login">Login</Link></li>
           <li>

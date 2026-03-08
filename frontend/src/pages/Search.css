@@ -1,3 +1,4 @@
+/* --- Estilos de la página de búsqueda --- */
 .search-page {
   padding: 10px; /* Reducimos padding en mobile */
   width: 100%;
@@ -11,9 +12,10 @@
   transition: color 0.3s ease;
 }
 
+/* Contenedor del input centrado */
 .search-container {
   display: flex;
-  justify-content: center; /* Esto lo centra horizontalmente */
+  justify-content: center; 
   align-items: center;
   margin-bottom: 40px;
   width: 100%;
@@ -37,7 +39,10 @@
   border-color: #007bff;
 }
 
-/* Grilla de resultados usando CSS Grid */
+/* Grilla de resultados: 
+  Se usa repeat(auto-fill) para que la cantidad de columnas 
+  se adapte automáticamente al ancho de la pantalla (Responsividad Dinámica).
+*/
 .results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -51,6 +56,7 @@
   padding: 20px;
   text-align: center;
   border: 1px solid #333;
+  /* Efecto de elevación al pasar el mouse */
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -81,6 +87,7 @@
   margin-bottom: 15px;
 }
 
+/* Estilo para el botón de acceso al perfil individual */
 .view-profile-btn {
   background-color: #007bff;
   color: white;

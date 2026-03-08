@@ -1,4 +1,7 @@
-// src/data/mockUsers.js
+/**
+ * Datos estáticos de usuarios para pruebas (Mock Data).
+ * Se utiliza para simular la respuesta de una API en el desarrollo de la FE-03.
+ */
 export const mockUsers = [
   { id: 1, name: "Cristian Landeira", skill: "React / C#", avatar: "https://i.pravatar.cc/150?u=24" },
   { id: 2, name: "María González", skill: "Node.js", avatar: "https://i.pravatar.cc/150?u=25" },
@@ -15,5 +18,5 @@ export const mockUsers = [
   { id: 13, name: "Martín Sosa", skill: "QA / Testing", avatar: "https://i.pravatar.cc/150?u=38" },
   { id: 14, name: "Camila Díaz", skill: "Project Manager", avatar: "https://i.pravatar.cc/150?u=42" },
   { id: 15, name: "Bruno Wagner", skill: "Rust / Blockchain", avatar: "https://i.pravatar.cc/150?u=48" },
-  { id: 16, name: "Fernando Suarez", skill: "Angular/Typescritp", avatar: "https://i.pravatar.cc/150?u=67"},
+ 
 ];
