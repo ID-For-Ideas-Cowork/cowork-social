@@ -4,9 +4,11 @@
   --transition-speed: 0.3s;
   --card-bg: #ffffff;
   --card-color: #dcd8d8;
-  --btn-secondary-bg: #e4e6eb;
-  --btn-secondary-text: #1c1e21;
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #fdfcfc;
   --color-profile: #1c1e21;
+  --text-color-post: #1e2024;
+  --background-hover: #667eea;
 }
 
 [data-theme="dark"] {
@@ -14,9 +16,11 @@
   --text-color: #ffffff;
   --card-bg: #242424;
   --card-color: #dcd8d8;
-  --btn-secondary-bg: #333;
-  --btn-secondary-text: #ffffff;
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-text: #000;
   --color-profile: #e1ebfa;
+  --text-color-post: #c9d2df;
+  --background-hover: #764ba2;
 }
 
 
@@ -38,7 +42,7 @@ body {
 
 }
 
- /* inicio formato toggle */
+ /* toggle format */
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
@@ -88,7 +92,7 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
-/* fin formato toggle */
+/* end toggle format */
 
 .App {
   min-height: 100vh;
@@ -131,7 +135,8 @@ input:checked + .slider:before {
 }
 
 .btn-secondary:hover {
-  background-color: #d8dadf;
+  background-color: var(--background-hover);
+  color: var(--btn-secondary-text);
 }
 
 .card {

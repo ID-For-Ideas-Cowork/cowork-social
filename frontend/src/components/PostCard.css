@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--text-color-post);
   font-weight: bold;
   font-size: 18px;
 }
@@ -28,12 +28,12 @@
 .author-info h4 {
   margin: 0;
   font-size: 15px;
-  color: #1c1e21;
+  color: var(--text-color-post);
 }
 
 .post-date {
   font-size: 13px;
-  color: #65676b;
+  color: var(--text-color-post);
 }
 
 .post-content {
@@ -43,7 +43,7 @@
 .post-content p {
   margin: 0 0 10px 0;
   line-height: 1.5;
-  color: #1c1e21;
+  color: var(--text-color-post);
 }
 
 .post-image {
@@ -56,7 +56,7 @@
   display: flex;
   gap: 10px;
   padding-top: 10px;
-  border-top: 1px solid #e4e6eb;
+  border-top: 1px solid #859fe2;
 }
 
 .action-btn {
@@ -68,10 +68,10 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  color: #65676b;
-  transition: background 0.2s;
+  color: var(--text-color-post);
+  transition: background-color 0.3s ease;
 }
 
 .action-btn:hover {
-  background: #f0f2f5;
+  background: var(--background-hover);
 }
