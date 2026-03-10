@@ -35,6 +35,7 @@ frontend/build/
 frontend/.next/
 frontend/out/
 
+
 # Test coverage
 coverage/
 .nyc_output/
@@ -49,3 +50,6 @@ coverage/
 *.xlsx
 *.db
 *.sqlite
+
+# Custom Ignore
+**/package-lock.json
