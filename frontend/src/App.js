@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
+import Search from "./pages/Search";
 
 // Pages
 import Home from "./pages/Home";
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/search" element={<Search />} />
             <Route path="/feed" element={<Feed />} />
             <Route path="/profile/:userId" element={<Profile />} />
             <Route path="*" element={<NotFound />} />

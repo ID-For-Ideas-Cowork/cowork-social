@@ -29,6 +29,9 @@ const Navbar = () => {
 
         <ul className="navbar-menu">
           <li>
+            <Link to="/search">Buscar</Link>
+          </li>
+          <li>
             <Link to="/feed">Feed</Link>
           </li>
           <li>
