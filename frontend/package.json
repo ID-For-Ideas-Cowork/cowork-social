@@ -2,6 +2,9 @@
   "name": "cowork-social-frontend",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "typescript": "4.9.5"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1"
   }
 }
