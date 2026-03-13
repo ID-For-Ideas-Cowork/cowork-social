@@ -7,6 +7,7 @@ import "./Home.css";
  * Muestra información sobre la plataforma y llama a acción
  */
 const Home = () => {
+  console.log("DEPLOY EN VERCEL 2");
   return (
     <div className="home-page">
       <div className="hero-section">
