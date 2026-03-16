@@ -57,7 +57,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Render
-        run: curl -X POST ${{ secrets.RENDER_NODE_DEPLOY_HOOK }}
+        env:
+          DEPLOY_HOOK: ${{ secrets.RENDER_NODE_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$DEPLOY_HOOK" ]; then
+            curl -f -X POST $DEPLOY_HOOK
+          else
+            echo "RENDER_NODE_DEPLOY_HOOK not set, skipping deploy"
+          fi
 
   python-ci:
     needs: detect
@@ -85,4 +92,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Render
-        run: curl -X POST ${{ secrets.RENDER_PYTHON_DEPLOY_HOOK }}
+        env:
+          DEPLOY_HOOK: ${{ secrets.RENDER_PYTHON_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$DEPLOY_HOOK" ]; then
+            curl -f -X POST $DEPLOY_HOOK
+          else
+            echo "RENDER_PYTHON_DEPLOY_HOOK not set, skipping deploy"
+          fi
