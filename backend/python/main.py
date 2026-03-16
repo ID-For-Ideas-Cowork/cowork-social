@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import time
+
+start_time = time.time()
 
 app = FastAPI(
     title="CoWork Analytics API",
@@ -16,6 +19,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/")
 def read_root():
     return {
@@ -27,6 +31,28 @@ def read_root():
             "engagement": "/api/analytics/engagement?period=month",
             "top_posts": "/api/analytics/top-posts?limit=10"
         }
+    }
+
+
+@app.get("/health")
+def health_check():
+    return {
+        "status": "healthy",
+        "timestamp": time.time(),
+        "uptime": time.time() - start_time,
+        "service": "backend-python"
+    }
+
+
+@app.get("/health/detailed")
+def detailed_health():
+    import psutil
+    return {
+        "status": "healthy",
+        "uptime": time.time() - start_time,
+        "cpu_percent": psutil.cpu_percent(),
+        "memory_percent": psutil.virtual_memory().percent,
+        "service": "backend-python"
     }
 
 # TODO: Implementar endpoints para BE-03
