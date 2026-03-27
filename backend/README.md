@@ -8,13 +8,13 @@ APIs standalone con datos en memoria (sin base de datos).
 
 ```
 backend/
-├── nodejs/          # API REST con Express (BE-01, BE-02)
-└── python/          # API Analytics con FastAPI (BE-03)
+├── nodejs/          # API REST con Express (BE-01, BE-02, BE-04, BE-05)
+└── python/          # API Analytics con FastAPI (BE-03, BE-06)
 ```
 
-## 🎯 3 Tareas a Completar
+## 🎯 6 Tareas a Completar
 
-🔥 **IMPORTANTE**: Completa las **3 tareas** (BE-01, BE-02, BE-03).
+🔥 **IMPORTANTE**: Completa las **6 tareas** (BE-01 a BE-06).
 
 ### BE-01: API de Usuarios (Node.js)
 📂 Ver: `backend/nodejs/README.md`
@@ -23,6 +23,15 @@ backend/
 📂 Ver: `backend/nodejs/README.md`
 
 ### BE-03: Dashboard Analytics (Python/FastAPI)
+📂 Ver: `backend/python/README.md`
+
+### BE-04: API de Comentarios (Node.js)
+📂 Ver: `backend/nodejs/README.md`
+
+### BE-05: API de Seguidores/Following (Node.js)
+📂 Ver: `backend/nodejs/README.md`
+
+### BE-06: API de Estadísticas de Usuario (Python/FastAPI)
 📂 Ver: `backend/python/README.md`
 
 ---

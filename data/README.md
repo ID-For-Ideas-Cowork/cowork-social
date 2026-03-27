@@ -20,9 +20,9 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-## 🎯 3 Tareas a Completar (DA-01, DA-02, DA-03)
+## 🎯 6 Tareas a Completar (DA-01 a DA-06)
 
-🔥 **IMPORTANTE**: Debes completar las **3 tareas**, no solo 1.
+🔥 **IMPORTANTE**: Debes completar las **6 tareas**, no solo 1.
 
 ### DA-01: Dashboard de Engagement 📊
 
@@ -103,6 +103,48 @@ data/DA-03-growth-report/
 ├── dashboard.py
 └── requirements.txt
 ```
+
+---
+
+### DA-04: Análisis de Red Social (Network Analysis) 🕸️
+
+**Qué hacer:**
+1. Genera un grafo de conexiones entre usuarios
+2. Calcula centralidad, comunidades y usuarios puente
+3. Visualiza la red con `networkx` y `plotly`
+
+**Entregables clave:**
+- Notebook con análisis de red
+- Visualizaciones de grafo
+- Top influencers identificados
+
+---
+
+### DA-05: Predicción de Engagement 🤖
+
+**Qué hacer:**
+1. Construye dataset de entrenamiento con features de posts
+2. Entrena modelo de regresión para predecir engagement
+3. Evalúa con métricas (RMSE y R²)
+
+**Entregables clave:**
+- Notebook de entrenamiento
+- Modelo serializado
+- Feature importance
+
+---
+
+### DA-06: Métricas Comparativas por Segmento 📉
+
+**Qué hacer:**
+1. Segmenta usuarios por comportamiento/skills
+2. Compara engagement, frecuencia y retención por segmento
+3. Crea dashboard con filtros
+
+**Entregables clave:**
+- Dashboard comparativo
+- Insights por segmento
+- Reporte final con recomendaciones
 
 ---
 

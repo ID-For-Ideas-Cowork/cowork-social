@@ -50,3 +50,5 @@ coverage/
 *.xlsx
 *.db
 *.sqlite
+
+project-meta.json

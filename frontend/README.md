@@ -15,7 +15,7 @@ Abre [http://localhost:3000](http://localhost:3000)
 
 ## 🎯 Tareas a Completar
 
-🔥 **IMPORTANTE**: Debes completar las **3 tareas**, no solo 1.
+🔥 **IMPORTANTE**: Debes completar las **9 tareas** (FE-01 a FE-09), no solo 1.
 
 ### FE-01: Tema Oscuro/Claro ⚫⚪
 
@@ -168,6 +168,66 @@ Abre [http://localhost:3000](http://localhost:3000)
 
 **Modificar:**
 - `src/components/Navbar.js` - agregar ícono de notificaciones
+
+---
+
+### FE-07: Sistema de Seguir/Dejar de Seguir Usuarios 🤝
+
+**Qué hacer:**
+- Implementar botón de seguir/dejar de seguir en perfiles
+- Mostrar listas de seguidores y siguiendo
+- Actualizar contadores en tiempo real
+- Persistir estado en `localStorage`
+
+**Archivos a crear:**
+- `src/components/FollowButton.js`
+- `src/components/FollowButton.css`
+- `src/pages/FollowersList.js`
+- `src/pages/FollowingList.js`
+
+**Modificar:**
+- `src/pages/Profile.js`
+- `src/App.js` (agregar rutas)
+
+---
+
+### FE-08: Responsive Design y Mobile Optimization 📱
+
+**Qué hacer:**
+- Optimizar todas las vistas para mobile, tablet y desktop
+- Implementar menú hamburguesa en navbar
+- Añadir media queries en componentes y páginas
+- Validar usabilidad táctil
+
+**Breakpoints sugeridos:**
+- Mobile: 320px - 767px
+- Tablet: 768px - 1023px
+- Desktop: 1024px+
+
+**Modificar:**
+- `src/App.css`
+- `src/components/Navbar.js`
+- `src/components/Navbar.css`
+- CSS de páginas/componentes
+
+---
+
+### FE-09: Página de Configuración de Usuario ⚙️
+
+**Qué hacer:**
+- Crear página `/settings`
+- Secciones: notificaciones, privacidad, idioma y cuenta
+- Guardar preferencias en `localStorage`
+- Agregar validaciones y confirmaciones para acciones críticas
+
+**Archivos a crear:**
+- `src/pages/Settings.js`
+- `src/pages/Settings.css`
+- `src/components/SettingsSection.js`
+
+**Modificar:**
+- `src/App.js` (ruta `/settings`)
+- `src/components/Navbar.js` (link a settings)
 
 ---
 

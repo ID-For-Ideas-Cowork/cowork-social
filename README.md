@@ -18,10 +18,10 @@
 
 **CoWork Social** es un proyecto **open source de ID For IDeas** para que practiques tus skills contribuyendo a un proyecto real.
 
-**Tu misión**: Completar las **3 tareas** de tu rol y publicar tu trabajo en LinkedIn.
+**Tu misión**: Completar las tareas de tu rol y publicar tu trabajo en LinkedIn.
 
 ✅ Código base listo para modificar  
-✅ Cada rol tiene 3 tareas independientes  
+✅ Roadmap extendido: la mayoría de roles ahora tiene 6 tareas, Frontend tiene 9  
 ✅ No necesitas esperar a otros  
 ✅ Agrega el proyecto a tu portfolio  
 ✅ Aprende Git, GitHub y trabajo real  
@@ -38,11 +38,26 @@ git clone https://github.com/ID-For-Ideas-Cowork/cowork-social.git
 cd cowork-social
 ```
 
-### 2. Elige tu rol y completa las 3 tareas
+### 2. Elige tu rol y completa el roadmap de tu rol
 
 Ve a la sección [Roles y Tareas](#-roles-y-tareas) 👇
 
 Cada rol tiene sus propias instrucciones de instalación y ejecución.
+
+> Actualización: el detalle vigente de tareas extendidas (continuidad) está en los README de cada carpeta de rol y en project-meta.json.
+
+### Resumen rápido por rol
+
+| Rol | Rango de tareas | README |
+|---|---|---|
+| Frontend | FE-01 a FE-09 | [frontend/README.md](frontend/README.md) |
+| Backend Node.js | BE-01, BE-02, BE-04, BE-05 | [backend/nodejs/README.md](backend/nodejs/README.md) |
+| Backend Python | BE-03, BE-06 | [backend/python/README.md](backend/python/README.md) |
+| Data Analyst | DA-01 a DA-06 | [data/README.md](data/README.md) |
+| Designer | DS-01 a DS-06 | [design/README.md](design/README.md) |
+| Project Manager | PM-01 a PM-06 | [docs/README.md](docs/README.md) |
+| QA Tester | QA-01 a QA-06 | [qa/README.md](qa/README.md) |
+| DevOps Engineer | DO-01 a DO-06 | [devops/README.md](devops/README.md) |
 
 ---
 
@@ -158,7 +173,7 @@ Solo necesitas instalar lo que tu rol requiere:
 
 ## 👥 Roles y Tareas
 
-**🔥 IMPORTANTE**: Debes completar las **3 tareas** de tu rol, no solo 1.
+**🔥 IMPORTANTE**: Debes completar todas las tareas de tu rol según el roadmap actualizado.
 
 Cada área es **100% independiente**. No esperes a que otros terminen.
 
@@ -168,7 +183,7 @@ Cada área es **100% independiente**. No esperes a que otros terminen.
 
 **Stack**: React + localStorage (sin backend)
 
-#### ✅ Completa estas 3 tareas:
+#### ✅ Completa estas tareas del roadmap:
 
 1. **FE-01: Tema Oscuro/Claro** - Toggle entre modos, guarda preferencia en localStorage
 2. **FE-02: Modal de Crear Post** - Modal funcional, guarda posts en localStorage  
@@ -195,7 +210,7 @@ npm start
 
 **Stack**: Node.js + Python/FastAPI (datos mock, sin DB)
 
-#### ✅ Completa estas 3 tareas:
+#### ✅ Completa estas tareas del roadmap:
 
 1. **BE-01: API de Usuarios** (Node.js) - CRUD completo, datos en memoria, Swagger docs
 2. **BE-02: API de Posts** (Node.js) - CRUD completo, datos en memoria, Swagger docs
@@ -228,7 +243,7 @@ uvicorn main:app --reload
 
 **Stack**: Python + Pandas + Jupyter + Streamlit
 
-#### ✅ Completa estas 3 tareas:
+#### ✅ Completa estas tareas del roadmap:
 
 1. **DA-01: Dashboard de Engagement** - Métricas de actividad, Streamlit Cloud
 2. **DA-02: Análisis de Contenido** - Qué posts funcionan mejor, notebook + gráficos
@@ -256,7 +271,7 @@ jupyter notebook
 
 **Stack**: Markdown + Miro/Notion
 
-#### ✅ Completa estas 3 tareas:
+#### ✅ Completa estas tareas del roadmap:
 
 1. **PM-01: Roadmap** - Timeline visual, milestones, prioridades (Miro/Notion)
 2. **PM-02: User Stories** - 10-15 historias completas con criterios de aceptación
@@ -276,7 +291,7 @@ jupyter notebook
 
 **Stack**: Figma
 
-#### ✅ Completa estas 3 tareas:
+#### ✅ Completa estas tareas del roadmap:
 
 1. **DS-01: Design System** - Colores, tipografía, componentes (botones, inputs, cards)
 2. **DS-02: Mockups** - 3-5 pantallas principales (Login, Feed, Perfil)
@@ -296,7 +311,7 @@ jupyter notebook
 
 **Stack**: Cypress/Playwright + Test Documentation
 
-#### ✅ Completa estas 3 tareas:
+#### ✅ Completa estas tareas del roadmap:
 
 1. **QA-01: Test Plan** - Estrategia, test cases, matriz de compatibilidad
 2. **QA-02: Tests E2E** - 5-10 tests automatizados (Cypress/Playwright)
@@ -316,7 +331,7 @@ jupyter notebook
 
 **Stack**: Docker + GitHub Actions + Monitoring Tools
 
-#### ✅ Completa estas 3 tareas:
+#### ✅ Completa estas tareas del roadmap:
 
 1. **DO-01: CI/CD Pipeline** - GitHub Actions para testing y deploy automático
 2. **DO-02: Docker + Compose** - Dockeriza frontend y backend, docker-compose.yml funcional
@@ -353,7 +368,7 @@ docker ps
 1. **Fork** el proyecto en GitHub
 2. **Clone** tu fork: `git clone https://github.com/TU-USUARIO/cowork-social.git`
 3. **Crea rama**: `git checkout -b tu-nombre-FE-todas` (o BE/DA/PM/DS/QA)
-4. **Completa las 3 tareas** de tu rol
+4. **Completa las tareas de tu rol**
 5. **Commit**: `git commit -m "Completo tareas FE-01, FE-02, FE-03"`
 6. **Push** y abre **Pull Request**
 7. **Publica en LinkedIn** tagueando **ID For IDeas**
@@ -388,7 +403,7 @@ Puedes usar el siguiente template y pedirle al Coach ID que ayude a elaborar el 
 ```
 🚀 Completé mi contribución a CoWork Social
 
-Acabo de terminar las 3 tareas de [Tu Rol]:
+Acabo de terminar las tareas del roadmap de [Tu Rol]:
 ✅ [TAREA-01]: [Descripción]
 ✅ [TAREA-02]: [Descripción]
 ✅ [TAREA-03]: [Descripción]
@@ -421,18 +436,18 @@ Gracias @ID For IDeas por crear este proyecto 🙌
 
 ### Qué se evalúa:
 
-- ✅ Las 3 tareas completadas
+- ✅ Tareas del roadmap completadas
 - ✅ Funcionalidad correcta
 - ✅ Código bien estructurado
 - ✅ Deploy funcionando
 - ✅ Capacidad de explicar tu trabajo
 ### 🏆 Certificado de Completitud
 
-**Al completar exitosamente las 3 tareas de tu rol, recibirás:**
+**Al completar exitosamente las tareas de tu rol, recibirás:**
 
 🎓 **Certificado Digital** generado por **ID For IDeas** que incluye:
 - Tu nombre y rol completado
-- Las 3 tareas específicas realizadas
+- Las tareas específicas realizadas
 - Fecha de completitud
 - Firma digital de ID For IDeas
 - Link verificable en LinkedIn
@@ -480,7 +495,7 @@ Este certificado valida tu experiencia práctica y puede agregarse a tu portfoli
 ### 🚀 ¿Listo para empezar?
 
 **1.** Clona el proyecto  
-**2.** Completa las 3 tareas de tu rol  
+**2.** Completa las tareas de tu rol  
 **3.** Publica en LinkedIn tagueando **ID For IDeas**
 
 Hecho con ❤️ por la comunidad **ID For IDeas**

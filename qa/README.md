@@ -4,9 +4,11 @@
 
 Testing y Quality Assurance del proyecto.
 
-## 🎯 3 Tareas a Completar (QA-01, QA-02, QA-03)
+## 🎯 6 Tareas a Completar (QA-01 a QA-06)
 
-🔥 **IMPORTANTE**: Debes completar las **3 tareas**, no solo 1.
+🔥 **IMPORTANTE**: Debes completar las **6 tareas**, no solo 1.
+
+> Nota de continuidad: en el roadmap actual, QA-03 corresponde a pruebas de API (Postman/Newman). El reporte de bugs puede mantenerse como entregable complementario.
 
 ### QA-01: Plan de Testing + Test Cases 📋
 
@@ -154,14 +156,16 @@ describe('Login Flow', () => {
 
 ---
 
-### QA-03: Reporte de Bugs 🐛
+### QA-03: Tests de API + Reporte de Bugs 🐛
 
 **Qué hacer:**
-1. Ejecuta exploratory testing en la app
-2. Documenta 5-10 bugs encontrados
-3. Incluye pasos de reproducción
-4. Screenshots/videos como evidencia
-5. Clasifica por severidad y prioridad
+- Crear y ejecutar colección de API tests (Postman/Newman)
+- Validar status code, schema y errores esperados en endpoints críticos
+- Ejecutar exploratory testing en la app
+- Documentar 5-10 bugs encontrados
+- Incluir pasos de reproducción
+- Adjuntar screenshots/videos como evidencia
+- Clasificar por severidad y prioridad
 
 **Bug Report Format:**
 ```markdown
@@ -223,6 +227,46 @@ Funciona correctamente en desktop. Posible issue con touch events o z-index.
 - `qa/QA-03-bug-reports/BUGS.md`
 - `qa/QA-03-bug-reports/screenshots/` con capturas
 - `qa/QA-03-bug-reports/SUMMARY.md` con resumen y recomendaciones
+
+---
+
+### QA-04: Tests de Performance Básicos ⚡
+
+**Qué hacer:**
+1. Ejecuta auditoría Lighthouse en frontend
+2. Mide tiempo de respuesta de endpoints críticos
+3. Prueba carga concurrente ligera
+4. Documenta oportunidades de mejora
+
+**Deliverables:**
+- `qa/QA-04-performance/PERFORMANCE_REPORT.md`
+- Resultados y gráficas
+
+---
+
+### QA-05: Testing de Accesibilidad (a11y) ♿
+
+**Qué hacer:**
+1. Auditar navegación por teclado
+2. Verificar contraste y labels
+3. Revisar roles ARIA y compatibilidad con lector de pantalla
+
+**Deliverables:**
+- `qa/QA-05-accessibility/A11Y_REPORT.md`
+- Lista de issues con severidad y recomendaciones
+
+---
+
+### QA-06: Regression Testing Suite 🔁
+
+**Qué hacer:**
+1. Crear checklist de regresión para release
+2. Definir smoke tests críticos
+3. Estandarizar template de sign-off
+
+**Deliverables:**
+- `qa/QA-06-regression/REGRESSION_CHECKLIST.md`
+- Matriz de regresión por feature
 
 ---
 

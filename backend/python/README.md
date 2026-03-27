@@ -20,9 +20,9 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-## 🎯 Tarea a Completar (BE-03)
+## 🎯 Tareas a Completar (BE-03 y BE-06)
 
-🔥 **IMPORTANTE**: Completa esta tarea (BE-03: API de Analytics).
+🔥 **IMPORTANTE**: Completa ambas tareas Python (BE-03 y BE-06).
 
 API disponible en: `http://localhost:8000`
 Docs automáticas en: `http://localhost:8000/docs`
@@ -104,6 +104,26 @@ GET /api/analytics/top-posts?limit=10
   ]
 }
 ```
+
+---
+
+## 🎯 Tarea BE-06: Estadísticas de Usuario API
+
+**Qué hacer:**
+- Exponer métricas personalizadas por usuario
+- Comparar desempeño individual vs promedio global
+- Incluir tendencias de engagement por usuario
+
+**Endpoints sugeridos:**
+- `GET /api/stats/user/{id}`
+- `GET /api/stats/user/{id}/engagement`
+- `GET /api/stats/user/{id}/best-time`
+- `GET /api/stats/user/{id}/comparison`
+
+**Deliverables:**
+- Endpoints documentados en `/docs`
+- Datos sintéticos por usuario
+- Ejemplos de requests/responses
 
 ---
 

@@ -4,9 +4,9 @@
 
 Automatización, despliegue y monitoreo del proyecto.
 
-## 🎯 3 Tareas a Completar (DO-01, DO-02, DO-03)
+## 🎯 6 Tareas a Completar (DO-01 a DO-06)
 
-🔥 **IMPORTANTE**: Debes completar las **3 tareas**, no solo 1.
+🔥 **IMPORTANTE**: Debes completar las **6 tareas**, no solo 1.
 
 ### DO-01: CI/CD Pipeline con GitHub Actions 🚀
 
@@ -305,6 +305,46 @@ module.exports = logger;
 
 ---
 
+### DO-04: Gestión de Secrets y Variables de Entorno 🔐
+
+**Qué hacer:**
+1. Estandarizar archivos `.env.example`
+2. Separar variables por ambiente
+3. Configurar GitHub Secrets para CI/CD
+
+**Deliverables:**
+- `devops/DO-04-env/ENV_SETUP.md`
+- Checklist de seguridad de secretos
+
+---
+
+### DO-05: Infraestructura as Code Base 🏗️
+
+**Qué hacer:**
+1. Crear base IaC para despliegue reproducible
+2. Parametrizar variables por ambiente
+3. Documentar aprovisionamiento
+
+**Deliverables:**
+- `devops/DO-05-iac/` con templates
+- Guía de provisionamiento
+
+---
+
+### DO-06: Backup y Recovery Plan 🛟
+
+**Qué hacer:**
+1. Definir estrategia de respaldo
+2. Documentar escenarios de recuperación
+3. Crear runbook para incidentes y rollback
+
+**Deliverables:**
+- `devops/DO-06-backup-recovery/BACKUP_RECOVERY_PLAN.md`
+- Procedimiento de rollback
+- Checklist de prueba de recuperación
+
+---
+
 ## 📦 Estructura de Archivos
 
 ```
@@ -360,7 +400,7 @@ curl http://localhost:8000/health
 
 1. Fork del repo
 2. Trabaja en rama: `git checkout -b tu-nombre-devops`
-3. Completa las 3 tareas
+3. Completa las 6 tareas
 4. Commitea con mensajes claros:
    ```bash
    git commit -m "feat(devops): agrega CI/CD workflows"
@@ -377,7 +417,7 @@ curl http://localhost:8000/health
 **Ejemplo de descripción de PR:**
 
 ```markdown
-## DevOps - Completé las 3 tareas
+## DevOps - Completé las 6 tareas
 
 ### DO-01: CI/CD Pipeline ✅
 - Workflows: frontend-ci.yml, backend-ci.yml, lint.yml

@@ -4,9 +4,9 @@
 
 Diseño UI/UX en Figma. Todo el trabajo es en la nube.
 
-## 🎯 3 Tareas a Completar (DS-01, DS-02, DS-03)
+## 🎯 6 Tareas a Completar (DS-01 a DS-06)
 
-🔥 **IMPORTANTE**: Debes completar las **3 tareas**, no solo 1.
+🔥 **IMPORTANTE**: Debes completar las **6 tareas**, no solo 1.
 
 ### DS-01: Sistema de Diseño 🎨
 
@@ -79,6 +79,48 @@ Diseño UI/UX en Figma. Todo el trabajo es en la nube.
 - Link público de Figma
 - Exportar logos (SVG + PNG) a `design/DS-03-branding/logos/`
 - `BRAND_GUIDELINES.md` con guía de uso
+
+---
+
+### DS-04: Componentes de Interacción Social 💬
+
+**Qué hacer:**
+1. Diseña componentes de like, comentarios y compartir
+2. Define estados: default, hover, active, loading
+3. Incluye especificaciones de microinteracciones
+
+**Deliverables:**
+- Componentes listos en Figma
+- Assets exportados
+- `INTERACTION_GUIDE.md`
+
+---
+
+### DS-05: Variantes Dark Mode 🌙
+
+**Qué hacer:**
+1. Adaptar pantallas principales a dark mode
+2. Definir tokens de color para modo oscuro
+3. Validar contraste y accesibilidad
+
+**Deliverables:**
+- Pantallas en dark mode
+- Guía de contraste
+- `DARK_MODE_GUIDE.md`
+
+---
+
+### DS-06: Prototipos Interactivos (User Flows) 🔁
+
+**Qué hacer:**
+1. Prototipar flujos end-to-end en Figma
+2. Incluir transiciones entre pantallas
+3. Documentar flujo de onboarding y publicación
+
+**Deliverables:**
+- Prototipos navegables
+- Flujos documentados
+- `USER_FLOWS.md`
 
 ---
 

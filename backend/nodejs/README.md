@@ -13,9 +13,9 @@ npm run dev
 
 API disponible en: `http://localhost:5000`
 
-## 🎯 2 Tareas a Completar (BE-01 y BE-02)
+## 🎯 4 Tareas a Completar (BE-01, BE-02, BE-04 y BE-05)
 
-🔥 **IMPORTANTE**: Debes completar las **2 tareas**, no solo 1.
+🔥 **IMPORTANTE**: Debes completar las **4 tareas Node.js**, no solo 1.
 
 ### BE-01: API de Usuarios 👤
 
@@ -72,6 +72,38 @@ API disponible en: `http://localhost:5000`
 - `PUT /api/posts/:id` - Actualizar
 - `DELETE /api/posts/:id` - Eliminar
 - `POST /api/posts/:id/like` - Incrementar likes
+
+---
+
+### BE-04: API de Comentarios 💬
+
+**Qué hacer:**
+- CRUD de comentarios por post
+- Relación comentario -> usuario y post
+- Paginación para listados
+- Swagger documentation
+
+**Endpoints sugeridos:**
+- `GET /api/posts/:postId/comments`
+- `POST /api/posts/:postId/comments`
+- `PUT /api/comments/:id`
+- `DELETE /api/comments/:id`
+
+---
+
+### BE-05: API de Seguidores/Following 👥
+
+**Qué hacer:**
+- Seguir/dejar de seguir usuarios
+- Listados de followers/following
+- Contadores por usuario
+- Swagger documentation
+
+**Endpoints sugeridos:**
+- `POST /api/users/:id/follow`
+- `DELETE /api/users/:id/unfollow`
+- `GET /api/users/:id/followers`
+- `GET /api/users/:id/following`
 
 ---
 

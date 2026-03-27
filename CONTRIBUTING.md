@@ -6,7 +6,7 @@
 
 ## 🎯 Regla Principal
 
-**Completa las 3 tareas de tu rol**, no solo 1.
+**Completa el roadmap completo de tu rol** (ver README del área), no solo una parte.
 
 ---
 
@@ -107,7 +107,7 @@ npm start
 # Abre en navegador: http://localhost:3000
 ```
 
-**Lee:** `frontend/README.md` para las 3 tareas (FE-01, FE-02, FE-03)
+**Lee:** `frontend/README.md` para el roadmap Frontend (FE-01 a FE-09)
 
 ---
 
@@ -126,7 +126,7 @@ npm run dev
 # Docs en: http://localhost:5000/api-docs
 ```
 
-**Lee:** `backend/nodejs/README.md` para las 2 tareas (BE-01, BE-02)
+**Lee:** `backend/nodejs/README.md` para el roadmap Node.js (BE-01, BE-02, BE-04, BE-05)
 
 ---
 
@@ -154,7 +154,7 @@ uvicorn main:app --reload
 # Docs en: http://localhost:8000/docs
 ```
 
-**Lee:** `backend/python/README.md` para la tarea BE-03
+**Lee:** `backend/python/README.md` para el roadmap Python (BE-03, BE-06)
 
 ---
 
@@ -180,7 +180,7 @@ jupyter notebook
 streamlit run EXAMPLE_DASHBOARD.md
 ```
 
-**Lee:** `data/README.md` para las 3 tareas (DA-01, DA-02, DA-03)
+**Lee:** `data/README.md` para el roadmap Data (DA-01 a DA-06)
 
 ---
 
@@ -189,7 +189,7 @@ streamlit run EXAMPLE_DASHBOARD.md
 **No necesitas instalar nada.** Todo el trabajo es en Figma (cloud).
 
 1. Crea cuenta gratuita en [figma.com](https://figma.com)
-2. Lee `design/README.md` para las 3 tareas (DS-01, DS-02, DS-03)
+2. Lee `design/README.md` para el roadmap Design (DS-01 a DS-06)
 3. Crea tu archivo Figma
 4. Exporta assets cuando termines
 
@@ -201,7 +201,7 @@ streamlit run EXAMPLE_DASHBOARD.md
 
 1. Editor de Markdown (VS Code recomendado)
 2. Cuenta en Miro/Notion (gratis)
-3. Lee `docs/README.md` para las 3 tareas (PM-01, PM-02, PM-03)
+3. Lee `docs/README.md` para el roadmap PM (PM-01 a PM-06)
 4. Crea tus documentos
 
 ---
@@ -226,7 +226,7 @@ npm install --save-dev cypress
 npx cypress open
 ```
 
-**Lee:** `qa/README.md` para las 3 tareas (QA-01, QA-02, QA-03)
+**Lee:** `qa/README.md` para el roadmap QA (QA-01 a QA-06)
 
 ---
 
@@ -263,13 +263,13 @@ docker-compose up -d
 # - Configura monitors después de hacer deploy
 ```
 
-**Lee:** `devops/README.md` para las 3 tareas (DO-01, DO-02, DO-03)
+**Lee:** `devops/README.md` para el roadmap DevOps (DO-01 a DO-06)
 
 ---
 
-### 5️⃣ Completa las 3 Tareas
+### 5️⃣ Completa las Tareas de tu Roadmap
 
-Ahora que tienes todo funcionando, **trabaja en las 3 tareas de tu rol.**
+Ahora que tienes todo funcionando, **trabaja en todas las tareas de tu rol según el README actualizado.**
 
 **Workflow recomendado:**
 
@@ -299,7 +299,7 @@ Ahora que tienes todo funcionando, **trabaja en las 3 tareas de tu rol.**
 
 ### 6️⃣ Sube tu Código y Abre Pull Request
 
-Cuando hayas completado las 3 tareas:
+Cuando hayas completado las tareas definidas para tu rol:
 
 ```bash
 # 1. Verifica tus cambios
@@ -307,7 +307,7 @@ git status
 
 # 2. Asegúrate de tener todo commiteado
 git add .
-git commit -m "feat: completa las 3 tareas de [tu-rol]"
+git commit -m "feat: completa roadmap de [tu-rol]"
 
 # 3. Sube tu rama a GitHub
 git push origin tu-nombre-rol
@@ -317,11 +317,11 @@ git push origin tu-nombre-rol
 
 1. Ve a tu fork en GitHub: `github.com/TU-USUARIO/cowork-social`
 2. Verás un banner amarillo: **"Compare & pull request"** → Click
-3. **Título del PR:** `[ROL] Completo las 3 tareas - Tu Nombre`  
-   Ejemplo: `[Frontend] Completo las 3 tareas - María González`
+3. **Título del PR:** `[ROL] Completo roadmap - Tu Nombre`  
+   Ejemplo: `[Frontend] Completo roadmap FE-01 a FE-09 - María González`
 
 4. **Descripción:** Incluye:
-   - ✅ Lista de las 3 tareas completadas
+   - ✅ Lista de tareas del roadmap completadas
    - 📸 Screenshots o GIFs de tu trabajo
    - 🔗 Link a tu deploy
    - 🔗 Link a tu post de LinkedIn
@@ -335,6 +335,7 @@ git push origin tu-nombre-rol
 ✅ FE-01: Tema Oscuro/Claro
 ✅ FE-02: Modal de Crear Post
 ✅ FE-03: Buscador de Usuarios
+✅ ... (incluye todas las tareas de tu roadmap)
 
 ## Deploy
 
@@ -374,10 +375,11 @@ git push origin tu-nombre-rol
 ```
 🚀 ¡Completé mi contribución a CoWork Social!
 
-Terminé las 3 tareas de [Tu Rol]:
+Terminé las tareas del roadmap de [Tu Rol]:
 ✅ [TAREA-01]: [Breve descripción]
 ✅ [TAREA-02]: [Breve descripción]
 ✅ [TAREA-03]: [Breve descripción]
+✅ ...
 
 🔧 Stack: [Tecnologías usadas]
 🔗 Ver: [LINK]
@@ -392,7 +394,7 @@ Gracias @ID For IDeas 🙌
 
 Antes de enviar:
 
-- [ ] 3 tareas completadas
+- [ ] Tareas del roadmap completadas
 - [ ] Código funciona sin errores
 - [ ] Deploy funcionando
 - [ ] Screenshots en el PR
@@ -412,16 +414,16 @@ Antes de enviar:
 ## ❓ Preguntas Frecuentes
 
 **¿Es mi primera vez contribuyendo a open source, por dónde empiezo?**  
-💡 Sigue los pasos en orden: Fork → Clone → Lee el README de tu área → Ejecuta el código → Completa las 3 tareas.
+💡 Sigue los pasos en orden: Fork → Clone → Lee el README de tu área → Ejecuta el código → Completa el roadmap de tu rol.
 
 **¿Debo hacer fork del repo original o de otro fork?**  
 ✅ Siempre haz fork del repositorio ORIGINAL: `ID-For-Ideas-Cowork/cowork-social`
 
 **¿Solo 1 tarea está bien?**  
-❌ No, necesitas completar las 3 tareas de tu rol.
+❌ No, necesitas completar las tareas del roadmap de tu rol.
 
 **¿Puedo trabajar varias tareas a la vez?**  
-✅ Sí, pero es mejor hacer las 3 de tu rol juntas.
+✅ Sí, pero es mejor avanzar por bloques y cerrar entregables completos.
 
 **¿Qué si mi PR es rechazado?**  
 💡 Lee el feedback, ajusta y vuelve a enviar.

@@ -4,9 +4,9 @@
 
 Documentación, planificación y gestión del proyecto.
 
-## 🎯 3 Tareas a Completar (PM-01, PM-02, PM-03)
+## 🎯 6 Tareas a Completar (PM-01 a PM-06)
 
-🔥 **IMPORTANTE**: Debes completar las **3 tareas**, no solo 1.
+🔥 **IMPORTANTE**: Debes completar las **6 tareas**, no solo 1.
 
 ### PM-01: Roadmap del Proyecto 🗺️
 
@@ -126,6 +126,46 @@ Documentación, planificación y gestión del proyecto.
 - `docs/PM-03-contribution-guide/CONTRIBUTING.md`
 - Actualizar README principal con link a la guía
 - Opcional: Video tutorial o diagrama de flujo
+
+---
+
+### PM-04: Matriz de Riesgos y Mitigación ⚠️
+
+**Qué hacer:**
+1. Identificar riesgos técnicos, operativos y de timeline
+2. Evaluar probabilidad e impacto
+3. Definir plan de mitigación y responsables
+
+**Deliverables:**
+- `docs/PM-04-risk-management/RISK_MATRIX.md`
+- Plan de mitigación por riesgo
+
+---
+
+### PM-05: Plan de Comunicación del Proyecto 📣
+
+**Qué hacer:**
+1. Definir canales y frecuencia de comunicación
+2. Crear plantillas de updates semanales
+3. Establecer ruta de escalamiento
+
+**Deliverables:**
+- `docs/PM-05-communication-plan/COMMUNICATION_PLAN.md`
+- Plantillas de comunicación
+
+---
+
+### PM-06: Métricas y KPIs del Proyecto 📊
+
+**Qué hacer:**
+1. Definir KPIs de delivery, calidad y colaboración
+2. Crear tablero de seguimiento
+3. Establecer metas trimestrales
+
+**Deliverables:**
+- `docs/PM-06-kpis/PROJECT_METRICS.md`
+- Dashboard de KPIs
+- Definición de metas
 
 ---
 
