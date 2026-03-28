@@ -6,9 +6,12 @@
 
 ![CoWork Social](https://img.shields.io/badge/CoWork-Social-blue?style=for-the-badge)
 ![ID For IDeas](https://img.shields.io/badge/ID%20For-IDeas-orange?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Open%20Source-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Base%20Template-green?style=for-the-badge)
 
 **Red social para profesionales - Proyecto base para contribuir y aprender**
+
+> 📚 **Este es un repositorio base de referencia**  
+> Para participar activamente en el CoWork: [idforideas.com/cowork](https://idforideas.com/cowork)
 
 </div>
 
@@ -16,35 +19,44 @@
 
 ## 🎯 ¿Qué es esto?
 
-**CoWork Social** es un proyecto **open source de ID For IDeas** para que practiques tus skills contribuyendo a un proyecto real.
+**CoWork Social** es un **repositorio base de ID For IDeas** que sirve como guía y plantilla para colaborar en el [CoWork de ID For IDeas](https://idforideas.com/cowork).
 
-**Tu misión**: Completar las tareas de tu rol y publicar tu trabajo en LinkedIn.
+**Tu misión**: Usar este repo como referencia, completar las tareas de tu rol en tu propio repositorio y compartir tu trabajo en LinkedIn.
 
-✅ Código base listo para modificar  
+✅ Código base como guía para tu proyecto  
 ✅ Roadmap extendido: la mayoría de roles ahora tiene 6 tareas, Frontend tiene 9  
 ✅ No necesitas esperar a otros  
 ✅ Agrega el proyecto a tu portfolio  
-✅ Aprende Git, GitHub y trabajo real  
-✅ **Certificado digital** al completar tu rol
+✅ Aprende Git, GitHub y trabajo real
+
+> 📌 **Nota importante**: Este es un repo de referencia. Para participar en el CoWork, visita [idforideas.com/cowork](https://idforideas.com/cowork)
 
 ---
 
 ## ⚡ Inicio Rápido
 
-### 1. Clona el proyecto
+### 1. Descarga o clona este repo como referencia
 
 ```bash
 git clone https://github.com/ID-For-Ideas-Cowork/cowork-social.git
 cd cowork-social
 ```
 
-### 2. Elige tu rol y completa el roadmap de tu rol
+### 2. Crea tu propio repositorio
+
+Usa este proyecto como base para crear tu propio repositorio y comienza a trabajar en tu proyecto.
+
+### 3. Elige tu rol y completa el roadmap de tu rol
 
 Ve a la sección [Roles y Tareas](#-roles-y-tareas) 👇
 
 Cada rol tiene sus propias instrucciones de instalación y ejecución.
 
 > Actualización: el detalle vigente de tareas extendidas (continuidad) está en los README de cada carpeta de rol y en project-meta.json.
+
+### 4. Participa en el CoWork
+
+Regístrate y participa en [idforideas.com/cowork](https://idforideas.com/cowork) para recibir soporte y retroalimentación de la comunidad.
 
 ### Resumen rápido por rol
 
@@ -199,8 +211,9 @@ npm start
 
 **Entrega:**
 - Deploy en Vercel/Netlify
+- Repositorio con código documentado
 - Post en LinkedIn tagueando **ID For IDeas**
-- Pull Request con screenshots y link
+- Registro en [idforideas.com/cowork](https://idforideas.com/cowork) con screenshots y link
 
 📖 **Instrucciones completas**: [`frontend/README.md`](./frontend/README.md)
 
@@ -232,8 +245,9 @@ uvicorn main:app --reload
 
 **Entrega:**
 - Deploy en Render/Railway
+- Repositorio con código documentado
 - Post en LinkedIn tagueando **ID For IDeas**
-- Pull Request con Swagger/Postman collection
+- Registro en [idforideas.com/cowork](https://idforideas.com/cowork) con Swagger/Postman collection
 
 📖 **Instrucciones completas**: [`backend/nodejs/README.md`](./backend/nodejs/README.md) y [`backend/python/README.md`](./backend/python/README.md)
 
@@ -260,8 +274,9 @@ jupyter notebook
 **Entrega:**
 - Notebooks Jupyter con análisis
 - Deploy dashboard en Streamlit Cloud
+- Repositorio con código documentado
 - Post en LinkedIn tagueando **ID For IDeas**
-- Pull Request con notebooks y link
+- Registro en [idforideas.com/cowork](https://idforideas.com/cowork) con notebooks y link
 
 📖 **Instrucciones completas**: [`data/README.md`](./data/README.md)
 
@@ -278,10 +293,10 @@ jupyter notebook
 3. **PM-03: Onboarding Guide** - Guía para nuevos contributors
 
 **Entrega:**
-- Docs en Markdown en carpeta `docs/`
+- Docs en Markdown en tu repositorio
 - Board público (Miro/Notion/Trello)
-- Pull Request con archivos + link
 - Post en LinkedIn tagueando **ID For IDeas**
+- Registro en [idforideas.com/cowork](https://idforideas.com/cowork) con archivos + link
 
 📖 **Instrucciones completas**: [`docs/README.md`](./docs/README.md)
 
@@ -299,9 +314,9 @@ jupyter notebook
 
 **Entrega:**
 - Diseños en Figma (link público)
-- Exporta assets a carpeta `design/`
-- Pull Request con assets + README
+- Exporta assets y sube a tu repositorio
 - Post en LinkedIn tagueando **ID For IDeas**
+- Registro en [idforideas.com/cowork](https://idforideas.com/cowork) con assets + README
 
 📖 **Instrucciones completas**: [`design/README.md`](./design/README.md)
 
@@ -318,10 +333,10 @@ jupyter notebook
 3. **QA-03: Bug Report** - Testing exploratorio, documenta 5-10 bugs
 
 **Entrega:**
-- Test plans en carpeta `qa/`
+- Test plans en tu repositorio
 - Tests con instrucciones de ejecución
-- Pull Request con documentación
 - Post en LinkedIn tagueando **ID For IDeas**
+- Registro en [idforideas.com/cowork](https://idforideas.com/cowork) con documentación
 
 📖 **Instrucciones completas**: [`qa/README.md`](./qa/README.md)
 
@@ -351,31 +366,34 @@ docker ps
 ```
 
 **Entrega:**
-- GitHub Actions workflows funcionando
+- GitHub Actions workflows funcionando en tu repositorio
 - Docker Compose levanta todo el stack
 - Status page público con uptime
 - Post en LinkedIn tagueando **ID For IDeas**
-- Pull Request con documentación y links
+- Registro en [idforideas.com/cowork](https://idforideas.com/cowork) con documentación y links
 
 📖 **Instrucciones completas**: [`devops/README.md`](./devops/README.md)
 
 ---
 
-## 🚀 Cómo Contribuir
+## 🚀 Cómo Usar Este Repo
 
-### Proceso Simple
+### Proceso de Trabajo
 
-1. **Fork** el proyecto en GitHub
-2. **Clone** tu fork: `git clone https://github.com/TU-USUARIO/cowork-social.git`
-3. **Crea rama**: `git checkout -b tu-nombre-FE-todas` (o BE/DA/PM/DS/QA)
-4. **Completa las tareas de tu rol**
-5. **Commit**: `git commit -m "Completo tareas FE-01, FE-02, FE-03"`
-6. **Push** y abre **Pull Request**
+1. **Clona o descarga** este repositorio como referencia
+2. **Crea tu propio repositorio** para tu proyecto (puede ser privado o público)
+3. **Usa la estructura** de este repo como guía
+4. **Crea rama**: `git checkout -b tu-nombre-FE-todas` (o BE/DA/PM/DS/QA)
+5. **Completa las tareas de tu rol** en tu propio repositorio
+6. **Commit**: `git commit -m "Completo tareas FE-01, FE-02, FE-03"`
 7. **Publica en LinkedIn** tagueando **ID For IDeas**
+8. **Regístrate en el CoWork**: [idforideas.com/cowork](https://idforideas.com/cowork)
 
-### 📤 Pull Request Template
+> 📌 **Importante**: Este repo es una guía de referencia. Tu trabajo se realiza en tu propio repositorio, y el seguimiento y certificación se hace a través de la plataforma del CoWork.
 
-Cuando abras tu PR, usa este formato:
+### 📝 Formato de Documentación
+
+Cuando documentes tu trabajo, usa este formato:
 
 ```markdown
 ## Rol: [Frontend/Backend/Data/PM/Design/QA]
@@ -420,17 +438,17 @@ Gracias @ID For IDeas por crear este proyecto 🙌
 
 ---
 
-## � Proceso de Evaluación
+## 🎯 Proceso de Evaluación
 
 ### Workshop de Review de la Comunidad
 
-1. **📱 Publicas en LinkedIn** - Etiqueta a **ID For IDeas** con tu entregable (link a deploy/Figma/dashboard)
+1. **📱 Publicas en LinkedIn** - Etiqueta a **ID For IDeas** con tu entregable (link a tu repo/deploy/Figma/dashboard)
 
-2. **📝 Abres el PR** - Pull Request en GitHub con tus cambios, screenshots y descripción completa
+2. **📝 Registras tu proyecto** - En la plataforma del CoWork ([idforideas.com/cowork](https://idforideas.com/cowork)) compartes el link a tu repositorio y deployment
 
 3. **👥 Revisión Grupal** - Participas en workshop de la comunidad (sesión online programada)
 
-4. **🎤 Presentas tu Trabajo** - 5-10 minutos mostrando lo que construiste y lo que aprendiste mientras revisamos tus cambios en vivo.
+4. **🎤 Presentas tu Trabajo** - 5-10 minutos mostrando lo que construiste y lo que aprendiste mientras revisamos tu proyecto en vivo
 
 5. **💬 Recibes Feedback** - Retroalimentación constructiva del equipo y la comunidad
 
@@ -439,20 +457,10 @@ Gracias @ID For IDeas por crear este proyecto 🙌
 - ✅ Tareas del roadmap completadas
 - ✅ Funcionalidad correcta
 - ✅ Código bien estructurado
-- ✅ Deploy funcionando
+- ✅ Deploy funcionando (si aplica)
 - ✅ Capacidad de explicar tu trabajo
-### 🏆 Certificado de Completitud
+- ✅ Documentación en tu repositorio
 
-**Al completar exitosamente las tareas de tu rol, recibirás:**
-
-🎓 **Certificado Digital** generado por **ID For IDeas** que incluye:
-- Tu nombre y rol completado
-- Las tareas específicas realizadas
-- Fecha de completitud
-- Firma digital de ID For IDeas
-- Link verificable en LinkedIn
-
-Este certificado valida tu experiencia práctica y puede agregarse a tu portfolio profesional.
 ---
 
 ## � Recursos y Ejemplos
@@ -485,7 +493,9 @@ Este certificado valida tu experiencia práctica y puede agregarse a tu portfoli
 
 ## 🎓 Proyecto by ID For IDeas
 
-**CoWork Social** es una iniciativa de [**ID For IDeas**](https://idforideas.com/) para que desarrolles skills con proyectos reales.
+**CoWork Social** es un repositorio base de [**ID For IDeas**](https://idforideas.com/) para que desarrolles skills con proyectos reales.
+
+> 🌐 **Participa en el CoWork**: [idforideas.com/cowork](https://idforideas.com/cowork)
 
 👥 **Colaboradores**: Ver [CONTRIBUTORS.md](./CONTRIBUTORS.md)  
 📜 **Licencia**: [MIT License](./LICENSE)
@@ -494,9 +504,11 @@ Este certificado valida tu experiencia práctica y puede agregarse a tu portfoli
 
 ### 🚀 ¿Listo para empezar?
 
-**1.** Clona el proyecto  
-**2.** Completa las tareas de tu rol  
-**3.** Publica en LinkedIn tagueando **ID For IDeas**
+**1.** Descarga o clona este repo como guía  
+**2.** Crea tu propio repositorio  
+**3.** Completa las tareas de tu rol  
+**4.** Regístrate en [idforideas.com/cowork](https://idforideas.com/cowork)  
+**5.** Publica en LinkedIn tagueando **ID For IDeas**
 
 Hecho con ❤️ por la comunidad **ID For IDeas**
 
