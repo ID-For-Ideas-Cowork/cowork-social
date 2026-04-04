@@ -1,0 +1,102 @@
+name: Backend CI/CD
+
+on:
+  pull_request:
+    paths:
+      - "backend/nodejs/**"
+      - "backend/python/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/nodejs/**"
+      - "backend/python/**"
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    outputs:
+      is_node: ${{ steps.check.outputs.is_node }}
+      is_python: ${{ steps.check.outputs.is_python }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect backend Language
+        id: check
+        run: |
+          if [ -f "backend/nodejs/package.json" ]; then
+            echo "is_node=true" >> $GITHUB_OUTPUT
+          fi
+          if [ -f "backend/python/requirements.txt" ]; then
+            echo "is_python=true" >> $GITHUB_OUTPUT
+          fi
+
+  node-ci:
+    needs: detect
+    if: needs.detect.outputs.is_node == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend/nodejs
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+          cache-dependency-path: backend/nodejs/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+  node-deploy:
+    needs: node-ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Render
+        env:
+          DEPLOY_HOOK: ${{ secrets.RENDER_NODE_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$DEPLOY_HOOK" ]; then
+            curl -f -X POST "$DEPLOY_HOOK"
+          else
+            echo "RENDER_NODE_DEPLOY_HOOK not set, skipping deploy"
+          fi
+
+  python-ci:
+    needs: detect
+    if: needs.detect.outputs.is_python == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend/python
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+  python-deploy:
+    needs: python-ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Render
+        env:
+          DEPLOY_HOOK: ${{ secrets.RENDER_PYTHON_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$DEPLOY_HOOK" ]; then
+            curl -f -X POST "$DEPLOY_HOOK"
+          else
+            echo "RENDER_PYTHON_DEPLOY_HOOK not set, skipping deploy"
+          fi

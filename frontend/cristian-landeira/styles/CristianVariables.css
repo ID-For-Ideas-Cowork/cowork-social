@@ -1,0 +1,98 @@
+/* 1. VARIABLES DE TEMA (MODO CLARO) */
+:root {
+  --bg-color: #f0f2f5;
+  --bg-card: #ffffff;
+  --text-color: #1c1e21;
+  --nav-bg: #ffffff;
+  --btn-secondary-bg: #e4e6eb;
+}
+
+/* 2. VARIABLES DE TEMA (MODO OSCURO) */
+[data-theme='dark'] {
+  --bg-color: #1a1a1a;
+  --bg-card: #2d2d2d;
+  --text-color: #ffffff;
+  --nav-bg: #333333;
+  --btn-secondary-bg: #4e4f50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding-top: 60px; /* Height of navbar */
+  min-height: calc(100vh - 60px);
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #1877f2;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #166fe5;
+}
+
+.btn-secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background-color: #d8dadf;
+}
+
+.card {
+  background: var(--bg-card);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .main-content {
+    padding-top: 56px;
+  }
+}

@@ -1,0 +1,113 @@
+ /* --- Estilos de la página de búsqueda --- */
+.search-page {
+  padding: 10px; /* Reducimos padding en mobile */
+  width: 100%;
+  overflow-x: hidden; /* Evita el scroll horizontal fantasma */
+}
+
+.search-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  /* Usamos una transición suave para el cambio de color */
+  transition: color 0.3s ease;
+}
+
+/* Contenedor del input centrado */
+.search-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 0 20px; /* Evita que toque los bordes en mobile */
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 1px solid #444;
+  background-color: #2c2c2c;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+/* Grilla de resultados: 
+  Se usa repeat(auto-fill) para que la cantidad de columnas 
+  se adapte automáticamente al ancho de la pantalla (Responsividad Dinámica).
+*/
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Tarjetas de usuario */
+.user-card {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #333;
+  /* Efecto de elevación al pasar el mouse */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-color: #007bff;
+}
+
+.user-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #007bff;
+}
+
+.user-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.user-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* Estilo para el botón de acceso al perfil individual */
+.view-profile-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.view-profile-btn:hover {
+  background-color: #0056b3;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 20px;
+}
