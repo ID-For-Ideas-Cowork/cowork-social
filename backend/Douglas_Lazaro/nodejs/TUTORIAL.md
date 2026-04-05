@@ -98,8 +98,8 @@ Respuesta (201 Created):
 ```
 
 ## 🚀 Deploy
-- Link al API: `https://tu-api.onrender.com`
-- Link a docs: `https://tu-api.onrender.com/api-docs`
+- Link al API: `https://redes-sociales-8eql.onrender.com/`
+- Link a docs: `https://redes-sociales-8eql.onrender.com/api-docs/`
 
 ## 📝 Screenshots de Swagger
 - Aquí se muestran las capturas de pantalla de la interfaz de Swagger:
