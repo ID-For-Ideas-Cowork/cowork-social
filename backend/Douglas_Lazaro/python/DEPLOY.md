@@ -7,7 +7,9 @@
 - Aquí se muestran las capturas de pantalla de la interfaz de Swagger:
 <div style="width:500px; height:500px; border-radius:8px; display:block; margin:auto;">
 
-![Swagger Overview](./img/Endpoints-Analytics.png)
+![Swagger Overview](./img/Default-Analytics.png)
+
+![Swagger Active Users](./img/user-stats.png)
 
 </div>
 
