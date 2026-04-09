@@ -12,7 +12,12 @@ const swaggerOptions = {
     servers: [
       {
         url: `http://localhost:${process.env.PORT || 5000}`,
+        description: 'Development server',
       },
+      {
+        url: 'https://redes-sociales-8eql.onrender.com',
+        description: 'Production server',
+      }
     ],
   },
   apis: ['./src/api/*.js'],

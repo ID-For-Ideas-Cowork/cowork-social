@@ -10,6 +10,8 @@ const corOptions = {
             callback(new Error('No permitido por CORS'));
             }
     },
+    methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
+    credentials: true,
         optionsSuccessStatus: 200
 };
 
